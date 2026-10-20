@@ -12,5 +12,8 @@ Run these only when no production workload owns the GPU.
 | WSL-006 | GPU-PV uptime soak | Fixed synthetic control at fresh, 24h, and 72h WSL uptime | Fresh control | Planned | No GPU reset or concurrent workload |
 | WSL-007 | WSL release baseline | One stable WSL/kernel update | Pre-update WSL-002 | Planned | Requires a durable checkpoint and intentional shutdown |
 | WSL-008 | AMD-supported framework baseline | Clean AMD-published WSL PyTorch/ROCm pairing | Existing environment | Planned | Separate disposable environment |
+| MGPU-001 | Two-adapter discovery | Two physical AMD GPUs; inspect WSL → ROCDXG → HSA → HIP enumeration | Each adapter queried independently | Blocked: second GPU required | Production stopped; disposable environment |
+| MGPU-002 | Independent two-device compute | One generated kernel/context per HIP device | MGPU-001 | Blocked: MGPU-001 | Stop on first dxg warning |
+| MGPU-003 | Host-staged collective | Two-rank generated-buffer all-reduce | MGPU-002 | Blocked: MGPU-002 | No VRAM-pooling claim |
 
 Do not mark an experiment complete without attaching a sanitized result note.
