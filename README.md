@@ -46,6 +46,15 @@ The initial focus is GPU-PV/ROCDXG reliability under sustained training-like
 workloads: default control, one-variable attention experiment, allocation
 boundary, WSL-mounted I/O, and fresh-versus-aged WSL uptime.
 
+## Included harness
+
+`scripts/capture_environment.sh` writes a scrubbed, ignored version snapshot.
+`scripts/run_hip_smoke.sh` compiles a tiny generated-buffer HIP probe that
+enumerates adapters and verifies allocation, a kernel launch, synchronization,
+and a copy-back. It refuses to run while a recognizable production trainer owns
+the GPU. See [upstream triage](docs/UPSTREAM_TRIAGE.md) before publishing a
+result.
+
 The separate [mGPU roadmap](docs/MGPU_ROADMAP.md) describes the path from
 two-adapter discovery to independent compute, host-staged collectives, and
 eventual PyTorch DDP. It does not promise pooled VRAM or supported mGPU today.

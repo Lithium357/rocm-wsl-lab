@@ -9,6 +9,10 @@
 4. Change exactly one variable for the affected run.
 5. Choose a safe output directory outside the repository for raw logs.
 
+The supplied `scripts/capture_environment.sh` and `scripts/run_hip_smoke.sh`
+write under the ignored `artifacts/` directory by default. Review every artifact
+before copying a compact, sanitized summary into a result note.
+
 ## Required evidence
 
 Each result must include:
