@@ -1,0 +1,48 @@
+name: Sanitized repro result
+description: Record a synthetic ROCm/WSL result with its control case.
+title: "[repro]: "
+labels: [repro]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste raw logs, private paths, model content, credentials, or full system reports.
+  - type: input
+    id: experiment
+    attributes:
+      label: Experiment ID
+      placeholder: WSL-002
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Sanitized environment
+      description: Windows, WSL/kernel, driver, ROCDXG, HIP/framework versions, and hardware class.
+    validations:
+      required: true
+  - type: textarea
+    id: control
+    attributes:
+      label: Control result
+      description: What passed under the otherwise identical baseline?
+    validations:
+      required: true
+  - type: textarea
+    id: affected
+    attributes:
+      label: Affected result
+      description: One changed variable, outcome, and a short redacted error/timing summary.
+    validations:
+      required: true
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Confidence
+      options:
+        - Observed once
+        - Reproduced with control
+        - Reproduced on supported stack
+        - Upstream-confirmed
+    validations:
+      required: true

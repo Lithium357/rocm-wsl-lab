@@ -1,0 +1,25 @@
+# Generated results and potentially identifying local captures
+artifacts/
+results/
+logs/
+*.log
+*.etl
+*.zip
+*.tar
+*.tar.gz
+*.csv
+
+# Python environments and caches
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Model and dataset material
+data/
+models/
+checkpoints/
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.bin
