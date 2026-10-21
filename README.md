@@ -40,7 +40,8 @@ Windows display driver → Hyper-V / GPU-PV → WSL /dev/dxg
 Read [the protocol](docs/REPRODUCTION_PROTOCOL.md) before running a probe.
 Use [the experiment registry](docs/EXPERIMENTS.md) to avoid rerunning a known
 bad configuration. The [data policy](docs/DATA_POLICY.md) applies to every
-commit and issue attachment.
+commit and issue attachment. See the sanitized
+[reproduction hardware profile](HARDWARE_PROFILE.md) before comparing results.
 
 The initial focus is GPU-PV/ROCDXG reliability under sustained training-like
 workloads: default control, one-variable attention experiment, allocation
