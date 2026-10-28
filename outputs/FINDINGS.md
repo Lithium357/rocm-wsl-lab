@@ -25,3 +25,11 @@ The [HIP pool probe status](hip-pool-test-status-20261027.md) is preparation onl
 ## Running the probes
 
 Read [the repository protocol](../docs/REPRODUCTION_PROTOCOL.md) and [data policy](../docs/DATA_POLICY.md) first. GPU probes require a healthy idle GPU, generated inputs, readable kernel logs, and per-process limits. Never reset or alter production work to bypass a stop condition. CPU fixture bundles use inert dependencies and do not load AMD runtime libraries. Keep raw runs outside Git and publish only reviewed summaries.
+
+## Repository tracking issues
+
+- [#1: [Source reproduced] DXG queue-buffer helpers convert missing-allocation error into true](https://github.com/Lithium357/rocm-wsl-lab/issues/1)
+- [#2: [Hardware reproduced] Expandable segments fail at host access setup on WSL](https://github.com/Lithium357/rocm-wsl-lab/issues/2)
+- [#3: [CPU and GPU reproduced] Compiled eager checkpoint dropout has inconsistent gradients](https://github.com/Lithium357/rocm-wsl-lab/issues/3)
+- [#4: [Source reproduced; existing fix pending] Versioned-only ROCDXG loader lookup](https://github.com/Lithium357/rocm-wsl-lab/issues/4)
+- [#5: [Source reproduced; existing fix pending] DXCore failed-open cleanup retains stale descriptor](https://github.com/Lithium357/rocm-wsl-lab/issues/5)
