@@ -1,0 +1,268 @@
+{
+  "scope": "read-only metadata and readelf; no runtime import, dlopen, profiler execution or GPU access",
+  "python_for_audit": "3.14.4",
+  "packages": [
+    {
+      "name": "rocm",
+      "version": "10.0.0",
+      "rocdxg_record_paths": []
+    },
+    {
+      "name": "rocm-bootstrap",
+      "version": "0.1.0",
+      "rocdxg_record_paths": []
+    },
+    {
+      "name": "rocm-sdk-core",
+      "version": "10.0.0",
+      "rocdxg_record_paths": [
+        "_rocm_sdk_core/lib/librocdxg.so.1"
+      ]
+    },
+    {
+      "name": "rocm-sdk-device-gfx1101",
+      "version": "10.0.0",
+      "rocdxg_record_paths": []
+    },
+    {
+      "name": "rocm-sdk-libraries",
+      "version": "10.0.0",
+      "rocdxg_record_paths": []
+    },
+    {
+      "name": "torch",
+      "version": "2.13.0+rocm10.0.0",
+      "rocdxg_record_paths": []
+    }
+  ],
+  "files": [
+    {
+      "path": "$CORE/lib/librocdxg.so.1",
+      "symlink": false,
+      "resolved_path": "$CORE/lib/librocdxg.so.1",
+      "elf": true,
+      "dynamic": {
+        "RPATH": [
+          "$ORIGIN/../../_rocm_sdk_core/lib/llvm/lib:$ORIGIN/../../_rocm_sdk_core/lib/rocm_sysdeps/lib"
+        ],
+        "NEEDED": [
+          "libpthread.so.0",
+          "librt.so.1",
+          "libdl.so.2",
+          "libstdc++.so.6",
+          "libm.so.6",
+          "libc.so.6",
+          "libgcc_s.so.1"
+        ],
+        "SONAME": [
+          "librocdxg.so.1"
+        ]
+      },
+      "topology_export_presence": {
+        "hsaKmtOpenKFD": true,
+        "hsaKmtAcquireSystemProperties": true,
+        "hsaKmtGetNodeProperties": true,
+        "hsaKmtReleaseSystemProperties": true,
+        "hsaKmtCloseKFD": true,
+        "DxgAbiCheck": false
+      }
+    },
+    {
+      "path": "$CORE/lib/libhsa-runtime64.so.1",
+      "symlink": false,
+      "resolved_path": "$CORE/lib/libhsa-runtime64.so.1",
+      "elf": true,
+      "dynamic": {
+        "RPATH": [
+          "$ORIGIN:$ORIGIN/rocm_sysdeps/lib:$ORIGIN/../../_rocm_sdk_core/lib/llvm/lib:$ORIGIN/../../_rocm_sdk_core/lib/rocm_sysdeps/lib"
+        ],
+        "NEEDED": [
+          "librocm_sysdeps_elf.so.1",
+          "libdl.so.2",
+          "libpthread.so.0",
+          "librt.so.1",
+          "librocprofiler-register.so.0",
+          "librocm_sysdeps_drm.so.2",
+          "librocm_sysdeps_drm_amdgpu.so.1",
+          "libc.so.6",
+          "ld-linux-x86-64.so.2",
+          "librocm_sysdeps_numa.so.1",
+          "libstdc++.so.6",
+          "libm.so.6",
+          "libgcc_s.so.1"
+        ],
+        "SONAME": [
+          "libhsa-runtime64.so.1"
+        ]
+      }
+    },
+    {
+      "path": "$CORE/lib/librocprofiler-sdk.so.1",
+      "symlink": false,
+      "resolved_path": "$CORE/lib/librocprofiler-sdk.so.1",
+      "elf": true,
+      "dynamic": {
+        "RPATH": [
+          "$ORIGIN/rocm_sysdeps/lib:$ORIGIN/llvm/lib:$ORIGIN:$ORIGIN/../../_rocm_sdk_core/lib/llvm/lib:$ORIGIN/../../_rocm_sdk_core/lib/rocm_sysdeps/lib"
+        ],
+        "NEEDED": [
+          "libamd_comgr.so.3",
+          "librocm_sysdeps_dw.so.1",
+          "libpthread.so.0",
+          "libdl.so.2",
+          "librt.so.1",
+          "librocm_sysdeps_drm.so.2",
+          "librocm_sysdeps_drm_amdgpu.so.1",
+          "libstdc++.so.6",
+          "libm.so.6",
+          "libgcc_s.so.1",
+          "libc.so.6",
+          "ld-linux-x86-64.so.2"
+        ],
+        "SONAME": [
+          "librocprofiler-sdk.so.1"
+        ]
+      }
+    },
+    {
+      "path": "$CORE/lib/libamdhip64.so.7",
+      "symlink": false,
+      "resolved_path": "$CORE/lib/libamdhip64.so.7",
+      "elf": true,
+      "dynamic": {
+        "RPATH": [
+          "$ORIGIN/rocm_sysdeps/lib:$ORIGIN/llvm/lib:$ORIGIN:$ORIGIN/../../_rocm_sdk_core/lib/llvm/lib:$ORIGIN/../../_rocm_sdk_core/lib/rocm_sysdeps/lib"
+        ],
+        "NEEDED": [
+          "libdl.so.2",
+          "librocm_kpack.so.0",
+          "librocprofiler-register.so.0",
+          "librt.so.1",
+          "libamd_comgr.so.3",
+          "libhsa-runtime64.so.1",
+          "libstdc++.so.6",
+          "libm.so.6",
+          "libgcc_s.so.1",
+          "libpthread.so.0",
+          "libc.so.6",
+          "ld-linux-x86-64.so.2"
+        ],
+        "SONAME": [
+          "libamdhip64.so.7"
+        ]
+      }
+    },
+    {
+      "path": "$OPT_ROCM/lib/librocdxg.so",
+      "symlink": true,
+      "resolved_path": "$OPT_ROCM/lib/librocdxg.so.1.2.2",
+      "elf": true,
+      "dynamic": {
+        "NEEDED": [
+          "libstdc++.so.6",
+          "libm.so.6",
+          "libc.so.6",
+          "ld-linux-x86-64.so.2",
+          "libgcc_s.so.1"
+        ],
+        "SONAME": [
+          "librocdxg.so.1"
+        ],
+        "RUNPATH": [
+          "$OPT_ROCM/lib"
+        ]
+      },
+      "topology_export_presence": {
+        "hsaKmtOpenKFD": true,
+        "hsaKmtAcquireSystemProperties": true,
+        "hsaKmtGetNodeProperties": true,
+        "hsaKmtReleaseSystemProperties": true,
+        "hsaKmtCloseKFD": true,
+        "DxgAbiCheck": true
+      }
+    },
+    {
+      "path": "$OPT_ROCM/lib/librocdxg.so.1",
+      "symlink": true,
+      "resolved_path": "$OPT_ROCM/lib/librocdxg.so.1.2.2",
+      "elf": true,
+      "dynamic": {
+        "NEEDED": [
+          "libstdc++.so.6",
+          "libm.so.6",
+          "libc.so.6",
+          "ld-linux-x86-64.so.2",
+          "libgcc_s.so.1"
+        ],
+        "SONAME": [
+          "librocdxg.so.1"
+        ],
+        "RUNPATH": [
+          "$OPT_ROCM/lib"
+        ]
+      },
+      "topology_export_presence": {
+        "hsaKmtOpenKFD": true,
+        "hsaKmtAcquireSystemProperties": true,
+        "hsaKmtGetNodeProperties": true,
+        "hsaKmtReleaseSystemProperties": true,
+        "hsaKmtCloseKFD": true,
+        "DxgAbiCheck": true
+      }
+    },
+    {
+      "path": "$OPT_ROCM/lib/librocdxg.so.1.2.2",
+      "symlink": false,
+      "resolved_path": "$OPT_ROCM/lib/librocdxg.so.1.2.2",
+      "elf": true,
+      "dynamic": {
+        "NEEDED": [
+          "libstdc++.so.6",
+          "libm.so.6",
+          "libc.so.6",
+          "ld-linux-x86-64.so.2",
+          "libgcc_s.so.1"
+        ],
+        "SONAME": [
+          "librocdxg.so.1"
+        ],
+        "RUNPATH": [
+          "$OPT_ROCM/lib"
+        ]
+      },
+      "topology_export_presence": {
+        "hsaKmtOpenKFD": true,
+        "hsaKmtAcquireSystemProperties": true,
+        "hsaKmtGetNodeProperties": true,
+        "hsaKmtReleaseSystemProperties": true,
+        "hsaKmtCloseKFD": true,
+        "DxgAbiCheck": true
+      }
+    },
+    {
+      "path": "$CORE/bin/rocprofv3",
+      "symlink": false,
+      "resolved_path": "$CORE/bin/rocprofv3",
+      "elf": false
+    },
+    {
+      "path": "$CORE/bin/rocprofv3-avail",
+      "symlink": false,
+      "resolved_path": "$CORE/bin/rocprofv3-avail",
+      "elf": false
+    },
+    {
+      "path": "$VENV/bin/rocprofv3",
+      "symlink": false,
+      "resolved_path": "$VENV/bin/rocprofv3",
+      "elf": false
+    },
+    {
+      "path": "$VENV/bin/rocprofv3-avail",
+      "symlink": false,
+      "resolved_path": "$VENV/bin/rocprofv3-avail",
+      "elf": false
+    }
+  ],
+  "limitations": "ELF tags are static evidence only; dlopen names and runtime selection cannot be inferred from DT_NEEDED alone"
+}

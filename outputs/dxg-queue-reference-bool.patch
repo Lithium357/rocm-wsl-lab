@@ -1,0 +1,20 @@
+--- a/projects/rocr-runtime/libhsakmt/src/dxg/memory.cpp
++++ b/projects/rocr-runtime/libhsakmt/src/dxg/memory.cpp
+@@ -395,7 +395,7 @@
+   std::lock_guard<std::mutex> gard(*allocation_map_lock_);
+   auto it = allocation_map_->find(MemoryAddress);
+   if (it == allocation_map_->end()) {
+-    return HSAKMT_STATUS_ERROR;
++    return false;
+   }
+ 
+   gpu_mem = wsl::thunk::GpuMemory::Convert(it->second.handle);
+@@ -416,7 +416,7 @@
+     std::lock_guard<std::mutex> gard(*allocation_map_lock_);
+     auto it = allocation_map_->find(MemoryAddress);
+     if (it == allocation_map_->end()) {
+-      return HSAKMT_STATUS_ERROR;
++      return false;
+     }
+ 
+     gpu_mem = wsl::thunk::GpuMemory::Convert(it->second.handle);

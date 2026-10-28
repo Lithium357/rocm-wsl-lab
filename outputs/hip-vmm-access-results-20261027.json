@@ -1,0 +1,440 @@
+{
+  "cases": [
+    {
+      "run": "hip-vmm-device-20261027-01",
+      "api_trace": [
+        {
+          "probe": "public_hip_vmm",
+          "host_access": false
+        },
+        {
+          "api": "hipInit",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipSetDevice",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipRuntimeGetVersion",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "runtime_version": 71526333
+        },
+        {
+          "api": "hipMemGetAllocationGranularity",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "bytes": 2097152,
+          "granularity": 4096
+        },
+        {
+          "api": "hipMemAddressReserve",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemCreate",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemMap",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemSetAccess",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemcpyH2D",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipDeviceSynchronize",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemcpyD2H",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemUnmap",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemRelease",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemAddressFree",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "status": "pass"
+        }
+      ],
+      "events": [
+        {
+          "status": "started",
+          "index": 0,
+          "test": [
+            "public_hip_vmm",
+            "device"
+          ],
+          "utc": "2026-10-27T09:00:18.32765-06:00"
+        },
+        {
+          "status": "completed",
+          "index": 0,
+          "test": [
+            "public_hip_vmm",
+            "device"
+          ],
+          "returncode": 0,
+          "wall_s": 0.7695938159999969,
+          "reason": null,
+          "kernel_errors": [],
+          "utc": "2026-10-27T09:00:19.099687-06:00"
+        },
+        {
+          "status": "suite_complete",
+          "tests": 1,
+          "utc": "2026-10-27T09:00:19.102468-06:00"
+        }
+      ]
+    },
+    {
+      "run": "hip-vmm-host-20261027-01",
+      "api_trace": [
+        {
+          "probe": "public_hip_vmm",
+          "host_access": true
+        },
+        {
+          "api": "hipInit",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipSetDevice",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipRuntimeGetVersion",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "runtime_version": 71526333
+        },
+        {
+          "api": "hipMemGetAllocationGranularity",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "bytes": 2097152,
+          "granularity": 4096
+        },
+        {
+          "api": "hipMemAddressReserve",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemCreate",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemMap",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemSetAccess",
+          "code": 1,
+          "name": "hipErrorInvalidValue"
+        },
+        {
+          "api": "hipMemUnmap",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemRelease",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemAddressFree",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "status": "access_error",
+          "cleanup_passed": true
+        }
+      ],
+      "events": [
+        {
+          "status": "started",
+          "index": 0,
+          "test": [
+            "public_hip_vmm",
+            "host"
+          ],
+          "utc": "2026-10-27T09:00:27.842206-06:00"
+        },
+        {
+          "status": "completed",
+          "index": 0,
+          "test": [
+            "public_hip_vmm",
+            "host"
+          ],
+          "returncode": 10,
+          "wall_s": 0.26505059100000494,
+          "reason": null,
+          "kernel_errors": [],
+          "utc": "2026-10-27T09:00:28.109869-06:00"
+        }
+      ]
+    },
+    {
+      "run": "hip-vmm-device-20261027-02",
+      "api_trace": [
+        {
+          "probe": "public_hip_vmm",
+          "host_access": false
+        },
+        {
+          "api": "hipInit",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipSetDevice",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipRuntimeGetVersion",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "runtime_version": 71526333
+        },
+        {
+          "api": "hipMemGetAllocationGranularity",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "bytes": 2097152,
+          "granularity": 4096
+        },
+        {
+          "api": "hipMemAddressReserve",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemCreate",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemMap",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemSetAccess",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemcpyH2D",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipDeviceSynchronize",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemcpyD2H",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemUnmap",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemRelease",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemAddressFree",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "status": "pass"
+        }
+      ],
+      "events": [
+        {
+          "status": "started",
+          "index": 0,
+          "test": [
+            "public_hip_vmm",
+            "device"
+          ],
+          "utc": "2026-10-27T09:00:51.578606-06:00"
+        },
+        {
+          "status": "completed",
+          "index": 0,
+          "test": [
+            "public_hip_vmm",
+            "device"
+          ],
+          "returncode": 0,
+          "wall_s": 0.5165826009999819,
+          "reason": null,
+          "kernel_errors": [],
+          "utc": "2026-10-27T09:00:52.098334-06:00"
+        },
+        {
+          "status": "suite_complete",
+          "tests": 1,
+          "utc": "2026-10-27T09:00:52.100795-06:00"
+        }
+      ]
+    },
+    {
+      "run": "hip-vmm-host-20261027-02",
+      "api_trace": [
+        {
+          "probe": "public_hip_vmm",
+          "host_access": true
+        },
+        {
+          "api": "hipInit",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipSetDevice",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipRuntimeGetVersion",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "runtime_version": 71526333
+        },
+        {
+          "api": "hipMemGetAllocationGranularity",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "bytes": 2097152,
+          "granularity": 4096
+        },
+        {
+          "api": "hipMemAddressReserve",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemCreate",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemMap",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemSetAccess",
+          "code": 1,
+          "name": "hipErrorInvalidValue"
+        },
+        {
+          "api": "hipMemUnmap",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemRelease",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "api": "hipMemAddressFree",
+          "code": 0,
+          "name": "hipSuccess"
+        },
+        {
+          "status": "access_error",
+          "cleanup_passed": true
+        }
+      ],
+      "events": [
+        {
+          "status": "started",
+          "index": 0,
+          "test": [
+            "public_hip_vmm",
+            "host"
+          ],
+          "utc": "2026-10-27T09:01:03.707458-06:00"
+        },
+        {
+          "status": "completed",
+          "index": 0,
+          "test": [
+            "public_hip_vmm",
+            "host"
+          ],
+          "returncode": 10,
+          "wall_s": 0.2643027189999998,
+          "reason": null,
+          "kernel_errors": [],
+          "utc": "2026-10-27T09:01:03.97535-06:00"
+        }
+      ]
+    }
+  ],
+  "final_gpu_owners": [],
+  "final_kernel_stop_messages": []
+}

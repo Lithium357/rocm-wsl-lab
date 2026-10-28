@@ -1,0 +1,32 @@
+--- a/projects/rocprofiler-sdk/source/lib/rocprofiler-sdk/platform/wsl/dxg_topology.cpp
++++ b/projects/rocprofiler-sdk/source/lib/rocprofiler-sdk/platform/wsl/dxg_topology.cpp
+@@ -63,8 +63,13 @@
+     explicit RocdxgHandle(const DxgLoaderOps& ops_v)
+     : ops{ops_v}
+     {
+-        handle = ops.open(kLibRocdxgSoname, RTLD_NOW | RTLD_LOCAL | RTLD_NOLOAD);
+-        if(!handle) handle = ops.open(kLibRocdxgSoname, RTLD_NOW | RTLD_LOCAL);
++        // Match ROCr's versioned-first lookup; retain old external packages.
++        for(const auto* soname : {kLibRocdxgVersionedSoname, kLibRocdxgSoname})
++        {
++            handle = ops.open(soname, RTLD_NOW | RTLD_LOCAL | RTLD_NOLOAD);
++            if(!handle) handle = ops.open(soname, RTLD_NOW | RTLD_LOCAL);
++            if(handle) break;
++        }
+         if(!handle)
+         {
+             ROCP_WARNING << fmt::format(
+--- a/projects/rocprofiler-sdk/source/lib/rocprofiler-sdk/platform/wsl/dxg_thunk.hpp
++++ b/projects/rocprofiler-sdk/source/lib/rocprofiler-sdk/platform/wsl/dxg_thunk.hpp
+@@ -52,9 +52,8 @@
+ using PFN_hsaKmtCloseKFD                = HSAKMT_STATUS (*)();
+ using PFN_DxgAbiCheck                   = HSAKMT_STATUS (*)(HsaStructureSizes*);
+ 
+-// The unversioned soname, matching ThunkLoader::whoami() in the HSA runtime.
+-// Never a versioned name (librocdxg.so.1 / .so.7): hard-coding a soversion
+-// would silently stop resolving the very object the HSA runtime has loaded.
++// Match ROCr's versioned-first lookup, with the unversioned name as fallback.
++inline constexpr const char* kLibRocdxgVersionedSoname = "librocdxg.so.1";
+ inline constexpr const char* kLibRocdxgSoname = "librocdxg.so";
+ 
+ // Every entry point the topology read needs, all of them long-standing KMT

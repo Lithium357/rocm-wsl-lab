@@ -1,0 +1,142 @@
+{
+  "scope": "actual extracted DXG queue helpers and hsaKmtCreateQueueV2; inert allocation map, reference counter, loader and queue constructors; no AMD runtime, GPU or OS device calls",
+  "pins": {
+    "upstream-memory.cpp": "f66d0b982514f8b5d439ff3ebd4a317c3e9c126d",
+    "upstream-queues.cpp": "f8fb999b8d0fa9d97f40ebc8c420177829c19a5a"
+  },
+  "status_source": {
+    "path": "projects/rocr-runtime/libhsakmt/include/hsakmt/hsakmttypes.h",
+    "sha": "b6eaf4e8609f709468de767fdf28eac773942837",
+    "enum_line": "    HSAKMT_STATUS_ERROR                        = 1,  // General error return if not otherwise specified"
+  },
+  "cases": [
+    {
+      "contract_pass": true,
+      "helper_observed_true": false,
+      "create_status": -1,
+      "queue_constructors": 0,
+      "remaining_references": 0,
+      "variant": "upstream",
+      "scenario": "null_helpers"
+    },
+    {
+      "contract_pass": true,
+      "helper_observed_true": false,
+      "create_status": -1,
+      "queue_constructors": 0,
+      "remaining_references": 0,
+      "variant": "upstream",
+      "scenario": "registered_helpers"
+    },
+    {
+      "contract_pass": true,
+      "helper_observed_true": false,
+      "create_status": 3,
+      "queue_constructors": 0,
+      "remaining_references": 0,
+      "variant": "upstream",
+      "scenario": "null_queue"
+    },
+    {
+      "contract_pass": true,
+      "helper_observed_true": false,
+      "create_status": 0,
+      "queue_constructors": 1,
+      "remaining_references": 0,
+      "variant": "upstream",
+      "scenario": "registered_queue"
+    },
+    {
+      "contract_pass": false,
+      "helper_observed_true": true,
+      "create_status": -1,
+      "queue_constructors": 0,
+      "remaining_references": 0,
+      "variant": "upstream",
+      "scenario": "missing_acquire"
+    },
+    {
+      "contract_pass": false,
+      "helper_observed_true": true,
+      "create_status": -1,
+      "queue_constructors": 0,
+      "remaining_references": 0,
+      "variant": "upstream",
+      "scenario": "missing_release"
+    },
+    {
+      "contract_pass": false,
+      "helper_observed_true": false,
+      "create_status": 0,
+      "queue_constructors": 1,
+      "remaining_references": 0,
+      "variant": "upstream",
+      "scenario": "missing_queue"
+    },
+    {
+      "contract_pass": true,
+      "helper_observed_true": false,
+      "create_status": -1,
+      "queue_constructors": 0,
+      "remaining_references": 0,
+      "variant": "candidate",
+      "scenario": "null_helpers"
+    },
+    {
+      "contract_pass": true,
+      "helper_observed_true": false,
+      "create_status": -1,
+      "queue_constructors": 0,
+      "remaining_references": 0,
+      "variant": "candidate",
+      "scenario": "registered_helpers"
+    },
+    {
+      "contract_pass": true,
+      "helper_observed_true": false,
+      "create_status": 3,
+      "queue_constructors": 0,
+      "remaining_references": 0,
+      "variant": "candidate",
+      "scenario": "null_queue"
+    },
+    {
+      "contract_pass": true,
+      "helper_observed_true": false,
+      "create_status": 0,
+      "queue_constructors": 1,
+      "remaining_references": 0,
+      "variant": "candidate",
+      "scenario": "registered_queue"
+    },
+    {
+      "contract_pass": true,
+      "helper_observed_true": false,
+      "create_status": -1,
+      "queue_constructors": 0,
+      "remaining_references": 0,
+      "variant": "candidate",
+      "scenario": "missing_acquire"
+    },
+    {
+      "contract_pass": true,
+      "helper_observed_true": false,
+      "create_status": -1,
+      "queue_constructors": 0,
+      "remaining_references": 0,
+      "variant": "candidate",
+      "scenario": "missing_release"
+    },
+    {
+      "contract_pass": true,
+      "helper_observed_true": false,
+      "create_status": 3,
+      "queue_constructors": 0,
+      "remaining_references": 0,
+      "variant": "candidate",
+      "scenario": "missing_queue"
+    }
+  ],
+  "upstream_failures": 3,
+  "candidate_failures": 0
+}

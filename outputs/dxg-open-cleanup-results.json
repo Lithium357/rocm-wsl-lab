@@ -1,0 +1,145 @@
+{
+  "scope": "actual extracted hsaKmtOpenKFD with fake OS descriptor table and fake DXCore loader; no AMD runtime, OS descriptor close, /dev/dxg, or GPU",
+  "pins": {
+    "baseline": "68b051017441e32a158901cb63719d59e50576ee",
+    "proposed": "4e7c623aee1d6d09861d25cac9bda881ada0b9be"
+  },
+  "fix_pr": "https://github.com/ROCm/rocm-systems/pull/10738",
+  "pr_head": "06d49e43db342c6a73e87e55589e3da4ba201193",
+  "cases": [
+    {
+      "contract_pass": true,
+      "stored_fd_reset_after_failure": false,
+      "first_status": 0,
+      "opens": 1,
+      "closes": 0,
+      "invalid_fake_closes": 0,
+      "stored_fd_live_at_end": true,
+      "variant": "baseline",
+      "scenario": "healthy"
+    },
+    {
+      "contract_pass": true,
+      "stored_fd_reset_after_failure": true,
+      "first_status": 2,
+      "opens": 1,
+      "closes": 0,
+      "invalid_fake_closes": 0,
+      "stored_fd_live_at_end": false,
+      "variant": "baseline",
+      "scenario": "open_failure"
+    },
+    {
+      "contract_pass": true,
+      "stored_fd_reset_after_failure": false,
+      "first_status": 3,
+      "opens": 0,
+      "closes": 0,
+      "invalid_fake_closes": 0,
+      "stored_fd_live_at_end": true,
+      "variant": "baseline",
+      "scenario": "already_open"
+    },
+    {
+      "contract_pass": false,
+      "stored_fd_reset_after_failure": false,
+      "first_status": 1,
+      "opens": 1,
+      "closes": 1,
+      "invalid_fake_closes": 0,
+      "stored_fd_live_at_end": false,
+      "variant": "baseline",
+      "scenario": "loader_failure"
+    },
+    {
+      "contract_pass": false,
+      "stored_fd_reset_after_failure": false,
+      "first_status": 1,
+      "opens": 0,
+      "closes": 1,
+      "invalid_fake_closes": 1,
+      "stored_fd_live_at_end": true,
+      "variant": "baseline",
+      "scenario": "existing_fd_failure"
+    },
+    {
+      "contract_pass": false,
+      "stored_fd_reset_after_failure": false,
+      "first_status": 1,
+      "opens": 1,
+      "closes": 1,
+      "invalid_fake_closes": 0,
+      "stored_fd_live_at_end": false,
+      "variant": "baseline",
+      "scenario": "failure_then_recover"
+    },
+    {
+      "contract_pass": true,
+      "stored_fd_reset_after_failure": false,
+      "first_status": 0,
+      "opens": 1,
+      "closes": 0,
+      "invalid_fake_closes": 0,
+      "stored_fd_live_at_end": true,
+      "variant": "proposed",
+      "scenario": "healthy"
+    },
+    {
+      "contract_pass": true,
+      "stored_fd_reset_after_failure": true,
+      "first_status": 2,
+      "opens": 1,
+      "closes": 0,
+      "invalid_fake_closes": 0,
+      "stored_fd_live_at_end": false,
+      "variant": "proposed",
+      "scenario": "open_failure"
+    },
+    {
+      "contract_pass": true,
+      "stored_fd_reset_after_failure": false,
+      "first_status": 3,
+      "opens": 0,
+      "closes": 0,
+      "invalid_fake_closes": 0,
+      "stored_fd_live_at_end": true,
+      "variant": "proposed",
+      "scenario": "already_open"
+    },
+    {
+      "contract_pass": true,
+      "stored_fd_reset_after_failure": true,
+      "first_status": 1,
+      "opens": 1,
+      "closes": 1,
+      "invalid_fake_closes": 0,
+      "stored_fd_live_at_end": false,
+      "variant": "proposed",
+      "scenario": "loader_failure"
+    },
+    {
+      "contract_pass": true,
+      "stored_fd_reset_after_failure": true,
+      "first_status": 1,
+      "opens": 0,
+      "closes": 1,
+      "invalid_fake_closes": 0,
+      "stored_fd_live_at_end": false,
+      "variant": "proposed",
+      "scenario": "existing_fd_failure"
+    },
+    {
+      "contract_pass": true,
+      "stored_fd_reset_after_failure": true,
+      "first_status": 1,
+      "opens": 2,
+      "closes": 1,
+      "invalid_fake_closes": 0,
+      "stored_fd_live_at_end": true,
+      "variant": "proposed",
+      "scenario": "failure_then_recover"
+    }
+  ],
+  "baseline_failures": 3,
+  "proposed_failures": 0
+}

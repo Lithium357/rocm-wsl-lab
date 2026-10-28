@@ -62,8 +62,15 @@ eventual PyTorch DDP. It does not promise pooled VRAM or supported mGPU today.
 
 ## Status
 
-Repository scaffold only. No test result is published until it is reproduced
-with synthetic inputs and reviewed for private data.
+Controlled hardware results, isolated source regressions, candidate patches, and
+reproducers are published in [the findings index](outputs/FINDINGS.md).
+Each finding distinguishes observed behavior, reproduced behavior, existing upstream
+fixes, and source-only evidence. Historical local patches may be withdrawn; check
+the index and report before applying anything.
+
+The findings are tracked in this repository's Issues. New validated findings should
+be committed here with reviewed evidence and a linked tracking issue; third-party
+upstream submission is a separate action.
 
 ## Upstream references
 

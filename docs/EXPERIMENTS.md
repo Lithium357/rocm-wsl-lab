@@ -17,3 +17,19 @@ Run these only when no production workload owns the GPU.
 | MGPU-003 | Host-staged collective | Two-rank generated-buffer all-reduce | MGPU-002 | Blocked: MGPU-002 | No VRAM-pooling claim |
 
 Do not mark an experiment complete without attaching a sanitized result note.
+
+## Published campaign results
+
+See [the findings index](../outputs/FINDINGS.md) for exact controls, limitations and upstream status.
+
+| ID | Investigation | Result | Evidence class |
+| --- | --- | --- | --- |
+| WSL-009 | DXG queue-buffer Boolean lookup | Missing allocation incorrectly reports success; candidate two-line patch passes 14-case matrix | CPU-only actual-source reduction; GPU impact untested |
+| WSL-010 | Local VMM GPU-only vs GPU+host access | GPU-only passes; host descriptor rejected on local device allocation | Four standalone HIP runs; support boundary unresolved |
+| WSL-011 | Versioned ROCDXG loader | Existing unmerged PR #13576 covers loader issue; local historical patch withdrawn | Private ELF and injected loader tests |
+| WSL-012 | DXCore failed-open cleanup | Existing unmerged PR #10738 passes cleanup contract | Twelve CPU-only actual-source cases |
+| WSL-013 | Compiled checkpoint dropout | Wrong gradient masks on CPU and GPU; generic PyTorch issue #199251 | Two controlled matrices; not WSL attribution |
+
+Idle polling has a merged upstream fix. The known WSL field-spanning warning remains
+a stop condition, not a newly discovered hang. Prepared HIP pool work has no GPU
+execution result. Do not repeat fixed or unchanged unstable configurations.

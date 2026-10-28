@@ -1,0 +1,170 @@
+{
+  "scope": "extracted upstream constructor with private stand-in ELF; no GPU, AMD runtime or topology test",
+  "source_cpp_blob": "ad716825a4a4b8c81bbcb926cf83cc7ddd4bbdde",
+  "source_hpp_blob": "dceb8e885c2af624448eb36b245747f780c0ffcf",
+  "cases": [
+    {
+      "scenario": "versioned_only",
+      "ready": false,
+      "expected_ready": true,
+      "opens": 0,
+      "closes": 0,
+      "balanced": true,
+      "requests": [
+        "librocdxg.so",
+        "librocdxg.so"
+      ],
+      "variant": "upstream"
+    },
+    {
+      "scenario": "resident_versioned_only",
+      "ready": false,
+      "expected_ready": true,
+      "opens": 0,
+      "closes": 0,
+      "balanced": true,
+      "requests": [
+        "librocdxg.so",
+        "librocdxg.so"
+      ],
+      "variant": "upstream"
+    },
+    {
+      "scenario": "with_alias",
+      "ready": true,
+      "expected_ready": true,
+      "opens": 1,
+      "closes": 1,
+      "balanced": true,
+      "requests": [
+        "librocdxg.so",
+        "librocdxg.so"
+      ],
+      "variant": "upstream"
+    },
+    {
+      "scenario": "legacy_only",
+      "ready": true,
+      "expected_ready": true,
+      "opens": 1,
+      "closes": 1,
+      "balanced": true,
+      "requests": [
+        "librocdxg.so",
+        "librocdxg.so"
+      ],
+      "variant": "upstream"
+    },
+    {
+      "scenario": "missing",
+      "ready": false,
+      "expected_ready": false,
+      "opens": 0,
+      "closes": 0,
+      "balanced": true,
+      "requests": [
+        "librocdxg.so",
+        "librocdxg.so"
+      ],
+      "variant": "upstream"
+    },
+    {
+      "scenario": "missing_exports",
+      "ready": false,
+      "expected_ready": false,
+      "opens": 1,
+      "closes": 1,
+      "balanced": true,
+      "requests": [
+        "librocdxg.so",
+        "librocdxg.so"
+      ],
+      "variant": "upstream"
+    },
+    {
+      "scenario": "versioned_only",
+      "ready": true,
+      "expected_ready": true,
+      "opens": 1,
+      "closes": 1,
+      "balanced": true,
+      "requests": [
+        "librocdxg.so.1",
+        "librocdxg.so.1"
+      ],
+      "variant": "candidate"
+    },
+    {
+      "scenario": "resident_versioned_only",
+      "ready": true,
+      "expected_ready": true,
+      "opens": 1,
+      "closes": 1,
+      "balanced": true,
+      "requests": [
+        "librocdxg.so.1"
+      ],
+      "variant": "candidate"
+    },
+    {
+      "scenario": "with_alias",
+      "ready": true,
+      "expected_ready": true,
+      "opens": 1,
+      "closes": 1,
+      "balanced": true,
+      "requests": [
+        "librocdxg.so.1",
+        "librocdxg.so.1"
+      ],
+      "variant": "candidate"
+    },
+    {
+      "scenario": "legacy_only",
+      "ready": true,
+      "expected_ready": true,
+      "opens": 1,
+      "closes": 1,
+      "balanced": true,
+      "requests": [
+        "librocdxg.so.1",
+        "librocdxg.so.1",
+        "librocdxg.so",
+        "librocdxg.so"
+      ],
+      "variant": "candidate"
+    },
+    {
+      "scenario": "missing",
+      "ready": false,
+      "expected_ready": false,
+      "opens": 0,
+      "closes": 0,
+      "balanced": true,
+      "requests": [
+        "librocdxg.so.1",
+        "librocdxg.so.1",
+        "librocdxg.so",
+        "librocdxg.so"
+      ],
+      "variant": "candidate"
+    },
+    {
+      "scenario": "missing_exports",
+      "ready": false,
+      "expected_ready": false,
+      "opens": 1,
+      "closes": 1,
+      "balanced": true,
+      "requests": [
+        "librocdxg.so.1",
+        "librocdxg.so.1",
+        "librocdxg.so",
+        "librocdxg.so"
+      ],
+      "variant": "candidate"
+    }
+  ],
+  "upstream_contract_failures": 2,
+  "candidate_contract_failures": 0
+}

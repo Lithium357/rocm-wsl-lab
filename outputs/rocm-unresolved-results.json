@@ -1,0 +1,240 @@
+{
+  "cases": [
+    {
+      "run": "rocm-unresolved-01",
+      "arguments": [
+        "allocator",
+        "false"
+      ],
+      "start_utc": "2026-10-26T21:27:42.961921-06:00",
+      "completion": {
+        "status": "completed",
+        "index": 0,
+        "test": [
+          "allocator",
+          "false"
+        ],
+        "returncode": 0,
+        "wall_s": 7.123470445000001,
+        "reason": null,
+        "kernel_errors": [],
+        "utc": "2026-10-26T21:27:50.088955-06:00"
+      },
+      "result": {
+        "mode": "allocator",
+        "seed": 357,
+        "torch": "2.13.0+rocm10.0.0",
+        "hip": "7.15.26333",
+        "gpu": "AMD Radeon RX 7800 XT",
+        "arch": "gfx1101",
+        "allocator_config": "expandable_segments:False",
+        "status": "pass",
+        "allocations": 36,
+        "cycles": 36,
+        "initial_free_bytes": 15248211968,
+        "peak_live_bytes": 3087007744,
+        "peak_reserved_bytes": 3491758080,
+        "expandable_segments_in_snapshot": 0,
+        "allocation_retries": 0,
+        "oom_count": 0,
+        "elapsed_s": 2.483204185
+      }
+    },
+    {
+      "run": "rocm-unresolved-01",
+      "arguments": [
+        "allocator",
+        "true"
+      ],
+      "start_utc": "2026-10-26T21:27:50.096213-06:00",
+      "completion": {
+        "status": "completed",
+        "index": 1,
+        "test": [
+          "allocator",
+          "true"
+        ],
+        "returncode": 1,
+        "wall_s": 3.063077689,
+        "reason": null,
+        "kernel_errors": [],
+        "utc": "2026-10-26T21:27:53.163898-06:00"
+      },
+      "result": null
+    },
+    {
+      "run": "rocm-minimal-control-01",
+      "arguments": [
+        "minimal_allocator",
+        "false"
+      ],
+      "start_utc": "2026-10-26T21:29:15.88875-06:00",
+      "completion": {
+        "status": "completed",
+        "index": 0,
+        "test": [
+          "minimal_allocator",
+          "false"
+        ],
+        "returncode": 0,
+        "wall_s": 6.925704325000001,
+        "reason": null,
+        "kernel_errors": [],
+        "utc": "2026-10-26T21:29:22.818252-06:00"
+      },
+      "result": {
+        "mode": "minimal_allocator",
+        "seed": 357,
+        "torch": "2.13.0+rocm10.0.0",
+        "hip": "7.15.26333",
+        "gpu": "AMD Radeon RX 7800 XT",
+        "arch": "gfx1101",
+        "allocator_config": "expandable_segments:False",
+        "status": "pass",
+        "allocation_bytes": 4,
+        "elapsed_s": 1.1205496640000003
+      }
+    },
+    {
+      "run": "rocm-minimal-changed-01",
+      "arguments": [
+        "minimal_allocator",
+        "true"
+      ],
+      "start_utc": "2026-10-26T21:29:34.258576-06:00",
+      "completion": {
+        "status": "completed",
+        "index": 0,
+        "test": [
+          "minimal_allocator",
+          "true"
+        ],
+        "returncode": 10,
+        "wall_s": 4.103497948000001,
+        "reason": null,
+        "kernel_errors": [],
+        "utc": "2026-10-26T21:29:38.367357-06:00"
+      },
+      "result": {
+        "mode": "minimal_allocator",
+        "seed": 357,
+        "torch": "2.13.0+rocm10.0.0",
+        "hip": "7.15.26333",
+        "gpu": "AMD Radeon RX 7800 XT",
+        "arch": "gfx1101",
+        "allocator_config": "expandable_segments:True",
+        "status": "allocation_error",
+        "allocation_bytes": 4,
+        "error_type": "AcceleratorError",
+        "error": "CUDA error: invalid argument",
+        "elapsed_s": 0.5268201879999985
+      }
+    },
+    {
+      "run": "rocm-minimal-changed-02",
+      "arguments": [
+        "minimal_allocator",
+        "true"
+      ],
+      "start_utc": "2026-10-26T21:30:08.461653-06:00",
+      "completion": {
+        "status": "completed",
+        "index": 0,
+        "test": [
+          "minimal_allocator",
+          "true"
+        ],
+        "returncode": 10,
+        "wall_s": 5.093857248000006,
+        "reason": null,
+        "kernel_errors": [],
+        "utc": "2026-10-26T21:30:13.559135-06:00"
+      },
+      "result": {
+        "mode": "minimal_allocator",
+        "seed": 357,
+        "torch": "2.13.0+rocm10.0.0",
+        "hip": "7.15.26333",
+        "gpu": "AMD Radeon RX 7800 XT",
+        "arch": "gfx1101",
+        "allocator_config": "expandable_segments:True",
+        "status": "allocation_error",
+        "allocation_bytes": 4,
+        "error_type": "AcceleratorError",
+        "error": "CUDA error: invalid argument",
+        "elapsed_s": 0.4594391110000018
+      }
+    },
+    {
+      "run": "rocm-concurrency-01",
+      "arguments": [
+        "threaded_copies",
+        "--threads",
+        "1"
+      ],
+      "start_utc": "2026-10-26T21:30:23.159051-06:00",
+      "completion": {
+        "status": "completed",
+        "index": 0,
+        "test": [
+          "threaded_copies",
+          "--threads",
+          "1"
+        ],
+        "returncode": 0,
+        "wall_s": 4.336645649999994,
+        "reason": null,
+        "kernel_errors": [],
+        "utc": "2026-10-26T21:30:27.499848-06:00"
+      },
+      "result": {
+        "mode": "threaded_copies",
+        "seed": 357,
+        "torch": "2.13.0+rocm10.0.0",
+        "hip": "7.15.26333",
+        "gpu": "AMD Radeon RX 7800 XT",
+        "arch": "gfx1101",
+        "allocator_config": "<unset>",
+        "status": "pass",
+        "threads": 1,
+        "total_round_trips": 400,
+        "bytes_per_copy": 1048576,
+        "elapsed_s": 1.6900391899999931
+      }
+    },
+    {
+      "run": "rocm-concurrency-01",
+      "arguments": [
+        "threaded_copies",
+        "--threads",
+        "2"
+      ],
+      "start_utc": "2026-10-26T21:30:27.509875-06:00",
+      "completion": {
+        "status": "stopped",
+        "index": 1,
+        "test": [
+          "threaded_copies",
+          "--threads",
+          "2"
+        ],
+        "returncode": -15,
+        "wall_s": 4.206775788000002,
+        "reason": "new kernel instability",
+        "kernel_errors": [
+          "[   81.139499] memcpy: detected field-spanning write (size 4) of single field \"current_pos\" at drivers/hv/dxgkrnl/dxgvmbus.c:3095 (size 0)"
+        ],
+        "utc": "2026-10-26T21:30:31.72307-06:00"
+      },
+      "result": null
+    }
+  ],
+  "allocator_trace": [
+    "hipMemAddressReserve -> hipSuccess",
+    "hipMemCreate(2097152) -> hipSuccess",
+    "hipMemMap(2097152) -> hipSuccess",
+    "hipMemSetAccess(2097152, descriptor_count=2) -> hipErrorInvalidValue"
+  ],
+  "large_allocator_exception": "torch.AcceleratorError: CUDA error: invalid argument",
+  "interpretation": "No internal allocator assertion reproduced; warning case terminated by harness."
+}

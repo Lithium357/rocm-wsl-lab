@@ -1,0 +1,50 @@
+{
+  "scope": "actual extracted PR13576 active_hsa_runtime_dir, real dl_iterate_phdr over private inert ELF fixtures; no AMD libraries or GPU access",
+  "source_blob": "e730ea33a068f9610c5ee2b49ddedb67d1ed3dc0",
+  "pr_head": "65313194df87e824f2d3a3cd8f13dbcc22f8707a",
+  "interpretation": "Five ordinary cases pass. Two synthetic prefix-decoy cases demonstrate broad prefix matching; no installed-stack evidence or new ROCm defect claim.",
+  "cases": [
+    {
+      "expected_directory_selected": true,
+      "empty": true,
+      "case": "none",
+      "elapsed_ms": 13.93
+    },
+    {
+      "expected_directory_selected": true,
+      "empty": false,
+      "case": "absolute",
+      "elapsed_ms": 12.22
+    },
+    {
+      "expected_directory_selected": true,
+      "empty": false,
+      "case": "bare_name_absolute_search_dir",
+      "elapsed_ms": 11.23
+    },
+    {
+      "expected_directory_selected": true,
+      "empty": false,
+      "case": "relative_load",
+      "elapsed_ms": 11.22
+    },
+    {
+      "expected_directory_selected": true,
+      "empty": false,
+      "case": "absolute_symlink",
+      "elapsed_ms": 10.74
+    },
+    {
+      "expected_directory_selected": false,
+      "empty": false,
+      "case": "prefix_decoy_only",
+      "elapsed_ms": 10.29
+    },
+    {
+      "expected_directory_selected": false,
+      "empty": false,
+      "case": "prefix_decoy_before_valid",
+      "elapsed_ms": 14.26
+    }
+  ]
+}

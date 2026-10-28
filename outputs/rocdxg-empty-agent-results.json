@@ -1,0 +1,54 @@
+{
+  "scope": "unmodified pinned CLI main() with fake Python inventory backend; no real profiler/runtime/GPU",
+  "source_blob": "bcfb251c5daad1b171f667abad7276e37dd0a9d1",
+  "python": "3.14.4",
+  "cases": [
+    {
+      "case": "empty",
+      "argv": [
+        "list",
+        "--agent"
+      ],
+      "effective_exit_code": 0,
+      "stdout_nonempty": false,
+      "stderr_nonempty": false,
+      "control_gpu_marker": false
+    },
+    {
+      "case": "cpu_only",
+      "argv": [
+        "list",
+        "--agent"
+      ],
+      "effective_exit_code": 0,
+      "stdout_nonempty": false,
+      "stderr_nonempty": false,
+      "control_gpu_marker": false
+    },
+    {
+      "case": "gpu_control",
+      "argv": [
+        "list",
+        "--agent"
+      ],
+      "effective_exit_code": 0,
+      "stdout_nonempty": true,
+      "stderr_nonempty": false,
+      "control_gpu_marker": true
+    },
+    {
+      "case": "unmatched_device",
+      "argv": [
+        "-d",
+        "99",
+        "list",
+        "--agent"
+      ],
+      "effective_exit_code": 0,
+      "stdout_nonempty": false,
+      "stderr_nonempty": false,
+      "control_gpu_marker": false
+    }
+  ],
+  "interpretation": "Silent success is a CLI-layer contract observation conditional on backend returning an empty inventory; does not prove actual backend returns empty without diagnostics."
+}

@@ -1,0 +1,568 @@
+{
+  "cases": [
+    {
+      "run": "rocm-sparse-20261027-01",
+      "arguments": [
+        "sparse"
+      ],
+      "started_utc": "2026-10-27T08:28:52.260254-06:00",
+      "completion": {
+        "status": "completed",
+        "index": 0,
+        "test": [
+          "sparse"
+        ],
+        "returncode": 0,
+        "wall_s": 7.3713853369999995,
+        "reason": null,
+        "kernel_errors": [],
+        "utc": "2026-10-27T08:28:59.634559-06:00"
+      },
+      "result": {
+        "mode": "sparse",
+        "seed": 357,
+        "torch": "2.13.0+rocm10.0.0",
+        "hip": "7.15.26333",
+        "gpu": "AMD Radeon RX 7800 XT",
+        "arch": "gfx1101",
+        "status": "pass",
+        "deterministic_algorithms": true,
+        "requested_nnz": 250000,
+        "coalesced_nnz": 209704,
+        "shape": [
+          10000,
+          10000
+        ],
+        "dense_width": 64,
+        "outcomes": [
+          {
+            "device": "cpu",
+            "layout": "coo",
+            "status": "computed",
+            "runs": 20,
+            "distinct_outputs": 1,
+            "maximum_repeat_delta": 0.0,
+            "relative_l2_vs_cpu_fp64": 1.0394597980447196E-06,
+            "warning_categories": []
+          },
+          {
+            "device": "cpu",
+            "layout": "csr",
+            "status": "computed",
+            "runs": 20,
+            "distinct_outputs": 1,
+            "maximum_repeat_delta": 0.0,
+            "relative_l2_vs_cpu_fp64": 1.0394597980447196E-06,
+            "warning_categories": []
+          },
+          {
+            "device": "cuda",
+            "layout": "coo",
+            "status": "computed",
+            "runs": 20,
+            "distinct_outputs": 1,
+            "maximum_repeat_delta": 0.0,
+            "relative_l2_vs_cpu_fp64": 8.576178004851676E-07,
+            "warning_categories": []
+          },
+          {
+            "device": "cuda",
+            "layout": "csr",
+            "status": "computed",
+            "runs": 20,
+            "distinct_outputs": 1,
+            "maximum_repeat_delta": 0.0,
+            "relative_l2_vs_cpu_fp64": 5.292964258790843E-07,
+            "warning_categories": []
+          }
+        ],
+        "elapsed_s": 2.681972019
+      }
+    },
+    {
+      "run": "rocm-dropout-20261027-01",
+      "arguments": [
+        "dropout"
+      ],
+      "started_utc": "2026-10-27T08:29:21.895785-06:00",
+      "completion": {
+        "status": "completed",
+        "index": 0,
+        "test": [
+          "dropout"
+        ],
+        "returncode": 10,
+        "wall_s": 7.608629506999996,
+        "reason": null,
+        "kernel_errors": [],
+        "utc": "2026-10-27T08:29:29.507484-06:00"
+      },
+      "result": {
+        "mode": "dropout",
+        "seed": 357,
+        "torch": "2.13.0+rocm10.0.0",
+        "hip": "7.15.26333",
+        "gpu": "AMD Radeon RX 7800 XT",
+        "arch": "gfx1101",
+        "status": "candidate",
+        "shape": [
+          64,
+          256
+        ],
+        "dropout_p": 0.3,
+        "preserve_rng_state": true,
+        "outcomes": [
+          {
+            "device": "cpu",
+            "backend": "plain",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "plain",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "plain",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "checkpoint",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "checkpoint",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "checkpoint",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "aot_eager",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "aot_eager",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "aot_eager",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "eager",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.41802978515625
+          },
+          {
+            "device": "cpu",
+            "backend": "eager",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.42950439453125
+          },
+          {
+            "device": "cpu",
+            "backend": "eager",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.41790771484375
+          },
+          {
+            "device": "cuda",
+            "backend": "plain",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "plain",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "plain",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "checkpoint",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "checkpoint",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "checkpoint",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "aot_eager",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "aot_eager",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "aot_eager",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "eager",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.42742919921875
+          },
+          {
+            "device": "cuda",
+            "backend": "eager",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.41461181640625
+          },
+          {
+            "device": "cuda",
+            "backend": "eager",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.41876220703125
+          }
+        ],
+        "elapsed_s": 3.2171759869999974
+      }
+    },
+    {
+      "run": "rocm-dropout-20261027-02",
+      "arguments": [
+        "dropout"
+      ],
+      "started_utc": "2026-10-27T08:29:57.45872-06:00",
+      "completion": {
+        "status": "completed",
+        "index": 0,
+        "test": [
+          "dropout"
+        ],
+        "returncode": 10,
+        "wall_s": 8.136959370999989,
+        "reason": null,
+        "kernel_errors": [],
+        "utc": "2026-10-27T08:30:05.599038-06:00"
+      },
+      "result": {
+        "mode": "dropout",
+        "seed": 357,
+        "torch": "2.13.0+rocm10.0.0",
+        "hip": "7.15.26333",
+        "gpu": "AMD Radeon RX 7800 XT",
+        "arch": "gfx1101",
+        "status": "candidate",
+        "shape": [
+          64,
+          256
+        ],
+        "dropout_p": 0.3,
+        "preserve_rng_state": true,
+        "outcomes": [
+          {
+            "device": "cpu",
+            "backend": "plain",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "plain",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "plain",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "checkpoint",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "checkpoint",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "checkpoint",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "aot_eager",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "aot_eager",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "aot_eager",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cpu",
+            "backend": "eager",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.41802978515625
+          },
+          {
+            "device": "cpu",
+            "backend": "eager",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.42950439453125
+          },
+          {
+            "device": "cpu",
+            "backend": "eager",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.41790771484375
+          },
+          {
+            "device": "cuda",
+            "backend": "plain",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "plain",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "plain",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "checkpoint",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "checkpoint",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "checkpoint",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "aot_eager",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "aot_eager",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "aot_eager",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.0
+          },
+          {
+            "device": "cuda",
+            "backend": "eager",
+            "seed": 0,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.42742919921875
+          },
+          {
+            "device": "cuda",
+            "backend": "eager",
+            "seed": 1,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.41461181640625
+          },
+          {
+            "device": "cuda",
+            "backend": "eager",
+            "seed": 2,
+            "status": "computed",
+            "forward_backward_mask_mismatch": 0.41876220703125
+          }
+        ],
+        "elapsed_s": 3.4488446710000034
+      }
+    },
+    {
+      "run": "rocm-graphs-20261027-01",
+      "arguments": [
+        "graphs",
+        "--sync",
+        "false"
+      ],
+      "started_utc": "2026-10-27T08:30:26.237245-06:00",
+      "completion": {
+        "status": "completed",
+        "index": 0,
+        "test": [
+          "graphs",
+          "--sync",
+          "false"
+        ],
+        "returncode": 0,
+        "wall_s": 5.844286283000002,
+        "reason": null,
+        "kernel_errors": [],
+        "utc": "2026-10-27T08:30:32.084516-06:00"
+      },
+      "result": {
+        "mode": "graphs",
+        "seed": 357,
+        "torch": "2.13.0+rocm10.0.0",
+        "hip": "7.15.26333",
+        "gpu": "AMD Radeon RX 7800 XT",
+        "arch": "gfx1101",
+        "status": "pass",
+        "graphs": 4,
+        "replays": 200,
+        "explicit_sync_before_stack": false,
+        "elapsed_s": 1.5613193410000008
+      }
+    },
+    {
+      "run": "rocm-graphs-20261027-01",
+      "arguments": [
+        "graphs",
+        "--sync",
+        "true"
+      ],
+      "started_utc": "2026-10-27T08:30:32.09132-06:00",
+      "completion": {
+        "status": "completed",
+        "index": 1,
+        "test": [
+          "graphs",
+          "--sync",
+          "true"
+        ],
+        "returncode": 0,
+        "wall_s": 3.3070782709999946,
+        "reason": null,
+        "kernel_errors": [],
+        "utc": "2026-10-27T08:30:35.400467-06:00"
+      },
+      "result": {
+        "mode": "graphs",
+        "seed": 357,
+        "torch": "2.13.0+rocm10.0.0",
+        "hip": "7.15.26333",
+        "gpu": "AMD Radeon RX 7800 XT",
+        "arch": "gfx1101",
+        "status": "pass",
+        "graphs": 4,
+        "replays": 200,
+        "explicit_sync_before_stack": true,
+        "elapsed_s": 1.078974255999995
+      }
+    }
+  ],
+  "final_gpu_owners": [],
+  "final_kernel_stop_messages": [],
+  "source_observation": "Installed torch/_higher_order_ops/wrap.py line 358 sets preserve_rng_state=False; read only."
+}

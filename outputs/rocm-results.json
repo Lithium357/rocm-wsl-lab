@@ -1,0 +1,2245 @@
+{
+  "results": [
+    {
+      "mode": "smoke",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "elapsed_s": 1.363639629000005,
+      "run": "rocm-run-01",
+      "case": "00.stdout"
+    },
+    {
+      "mode": "smoke",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "elapsed_s": 1.0888501149999854,
+      "run": "rocm-run-01",
+      "case": "01.stdout"
+    },
+    {
+      "mode": "idle",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "observed",
+      "baseline_cpu_percent": 0.0026598301299475295,
+      "post_gpu_cpu_percent": 199.9885082217787,
+      "interval_s": 5.000131302,
+      "high_idle_cpu": true,
+      "elapsed_s": 10.66816693200002,
+      "run": "rocm-run-01",
+      "case": "02.stdout"
+    },
+    {
+      "mode": "idle",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "observed",
+      "baseline_cpu_percent": 0.0008599783404093844,
+      "post_gpu_cpu_percent": 199.97148197843993,
+      "interval_s": 5.000129469000001,
+      "high_idle_cpu": true,
+      "elapsed_s": 10.629351151999998,
+      "run": "rocm-run-01",
+      "case": "03.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "math",
+      "dtype": "float32",
+      "shape": [
+        1,
+        4,
+        128,
+        256
+      ],
+      "relative_l2": 5.351486951983205E-07,
+      "max_absolute_error": 5.961305449275756E-07,
+      "relative_l2_limit": 0.0001,
+      "elapsed_s": 0.8040414740000017,
+      "run": "rocm-run-01",
+      "case": "04.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "default",
+      "dtype": "float32",
+      "shape": [
+        1,
+        4,
+        128,
+        256
+      ],
+      "relative_l2": 5.351486951983205E-07,
+      "max_absolute_error": 5.961305449275756E-07,
+      "relative_l2_limit": 0.0001,
+      "elapsed_s": 0.8472160400000064,
+      "run": "rocm-run-01",
+      "case": "05.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "unsupported",
+      "backend": "efficient",
+      "dtype": "float32",
+      "shape": [
+        1,
+        4,
+        128,
+        256
+      ],
+      "elapsed_s": 0.6705752530000098,
+      "run": "rocm-run-01",
+      "case": "06.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "math",
+      "dtype": "float32",
+      "shape": [
+        1,
+        4,
+        128,
+        320
+      ],
+      "relative_l2": 5.823322386700448E-07,
+      "max_absolute_error": 9.0245099093611E-07,
+      "relative_l2_limit": 0.0001,
+      "elapsed_s": 0.8614250830000003,
+      "run": "rocm-run-01",
+      "case": "07.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "default",
+      "dtype": "float32",
+      "shape": [
+        1,
+        4,
+        128,
+        320
+      ],
+      "relative_l2": 5.823322386700448E-07,
+      "max_absolute_error": 9.0245099093611E-07,
+      "relative_l2_limit": 0.0001,
+      "elapsed_s": 0.7361323399999833,
+      "run": "rocm-run-01",
+      "case": "08.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "unsupported",
+      "backend": "efficient",
+      "dtype": "float32",
+      "shape": [
+        1,
+        4,
+        128,
+        320
+      ],
+      "elapsed_s": 0.6447708989999796,
+      "run": "rocm-run-01",
+      "case": "09.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "math",
+      "dtype": "float32",
+      "shape": [
+        1,
+        4,
+        128,
+        384
+      ],
+      "relative_l2": 6.262320911151165E-07,
+      "max_absolute_error": 1.0261390424037842E-06,
+      "relative_l2_limit": 0.0001,
+      "elapsed_s": 0.7940829469999926,
+      "run": "rocm-run-01",
+      "case": "10.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "default",
+      "dtype": "float32",
+      "shape": [
+        1,
+        4,
+        128,
+        384
+      ],
+      "relative_l2": 6.262320911151165E-07,
+      "max_absolute_error": 1.0261390424037842E-06,
+      "relative_l2_limit": 0.0001,
+      "elapsed_s": 0.7908170789999929,
+      "run": "rocm-run-01",
+      "case": "11.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "unsupported",
+      "backend": "efficient",
+      "dtype": "float32",
+      "shape": [
+        1,
+        4,
+        128,
+        384
+      ],
+      "elapsed_s": 0.6389003609999975,
+      "run": "rocm-run-01",
+      "case": "12.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "math",
+      "dtype": "float32",
+      "shape": [
+        1,
+        4,
+        128,
+        512
+      ],
+      "relative_l2": 7.033526752642559E-07,
+      "max_absolute_error": 1.2711339987259151E-06,
+      "relative_l2_limit": 0.0001,
+      "elapsed_s": 0.7710279780000064,
+      "run": "rocm-run-01",
+      "case": "13.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "default",
+      "dtype": "float32",
+      "shape": [
+        1,
+        4,
+        128,
+        512
+      ],
+      "relative_l2": 7.033526752642559E-07,
+      "max_absolute_error": 1.2711339987259151E-06,
+      "relative_l2_limit": 0.0001,
+      "elapsed_s": 0.7464936230000205,
+      "run": "rocm-run-01",
+      "case": "14.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "unsupported",
+      "backend": "efficient",
+      "dtype": "float32",
+      "shape": [
+        1,
+        4,
+        128,
+        512
+      ],
+      "elapsed_s": 0.6116027999999858,
+      "run": "rocm-run-01",
+      "case": "15.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "math",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        128,
+        256
+      ],
+      "relative_l2": 0.0016685120960832742,
+      "max_absolute_error": 0.001942767396223899,
+      "relative_l2_limit": 0.02,
+      "elapsed_s": 0.9548611509999887,
+      "run": "rocm-run-01",
+      "case": "16.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "default",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        128,
+        256
+      ],
+      "relative_l2": 0.0016685120960832742,
+      "max_absolute_error": 0.001942767396223899,
+      "relative_l2_limit": 0.02,
+      "elapsed_s": 1.066928388000008,
+      "run": "rocm-run-01",
+      "case": "17.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "unsupported",
+      "backend": "efficient",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        128,
+        256
+      ],
+      "elapsed_s": 0.7115941469999996,
+      "run": "rocm-run-01",
+      "case": "18.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "math",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        128,
+        320
+      ],
+      "relative_l2": 0.0016619925174638456,
+      "max_absolute_error": 0.001930870022665565,
+      "relative_l2_limit": 0.02,
+      "elapsed_s": 0.9092407600000172,
+      "run": "rocm-run-01",
+      "case": "19.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "default",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        128,
+        320
+      ],
+      "relative_l2": 0.0016619925174638456,
+      "max_absolute_error": 0.001930870022665565,
+      "relative_l2_limit": 0.02,
+      "elapsed_s": 1.1785171909999974,
+      "run": "rocm-run-01",
+      "case": "20.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "unsupported",
+      "backend": "efficient",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        128,
+        320
+      ],
+      "elapsed_s": 0.8879419079999877,
+      "run": "rocm-run-01",
+      "case": "21.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "math",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        128,
+        384
+      ],
+      "relative_l2": 0.0016632074581472036,
+      "max_absolute_error": 0.0031497691049835463,
+      "relative_l2_limit": 0.02,
+      "elapsed_s": 1.028949007000051,
+      "run": "rocm-run-01",
+      "case": "22.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "default",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        128,
+        384
+      ],
+      "relative_l2": 0.0016632074581472036,
+      "max_absolute_error": 0.0031497691049835463,
+      "relative_l2_limit": 0.02,
+      "elapsed_s": 0.8126357680000069,
+      "run": "rocm-run-01",
+      "case": "23.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "unsupported",
+      "backend": "efficient",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        128,
+        384
+      ],
+      "elapsed_s": 0.5882193829999665,
+      "run": "rocm-run-01",
+      "case": "24.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "math",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        128,
+        512
+      ],
+      "relative_l2": 0.0016598941538644527,
+      "max_absolute_error": 0.0019523438694978301,
+      "relative_l2_limit": 0.02,
+      "elapsed_s": 0.8072827459999985,
+      "run": "rocm-run-01",
+      "case": "25.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "default",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        128,
+        512
+      ],
+      "relative_l2": 0.0016598941538644527,
+      "max_absolute_error": 0.0019523438694978301,
+      "relative_l2_limit": 0.02,
+      "elapsed_s": 0.9933062709999945,
+      "run": "rocm-run-01",
+      "case": "26.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "unsupported",
+      "backend": "efficient",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        128,
+        512
+      ],
+      "elapsed_s": 0.8571452529999988,
+      "run": "rocm-run-01",
+      "case": "27.stdout"
+    },
+    {
+      "mode": "copies",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "iterations": 100,
+      "bytes_per_copy": 1048576,
+      "copy_wall_s": 0.5659216890000494,
+      "elapsed_s": 0.899160964000032,
+      "run": "rocm-run-01",
+      "case": "28.stdout"
+    },
+    {
+      "mode": "copies",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "iterations": 100,
+      "bytes_per_copy": 1048576,
+      "copy_wall_s": 0.46830455699995355,
+      "elapsed_s": 0.7841754719999585,
+      "run": "rocm-run-01",
+      "case": "29.stdout"
+    },
+    {
+      "mode": "idle",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "observed",
+      "baseline_cpu_percent": 0.0017599320240308384,
+      "post_gpu_cpu_percent": 199.98751442621926,
+      "interval_s": 5.000138648000018,
+      "high_idle_cpu": true,
+      "hot_threads": [
+        {
+          "name": "python",
+          "cpu_percent": 99.99722711689058
+        },
+        {
+          "name": "python",
+          "cpu_percent": 99.99722711689058
+        },
+        {
+          "name": "python",
+          "cpu_percent": 0.0
+        },
+        {
+          "name": "python",
+          "cpu_percent": 0.0
+        }
+      ],
+      "library_basenames": [
+        "libamdhip64.so.7",
+        "libhsa-runtime64.so.1",
+        "librocdxg.so.1.2.2"
+      ],
+      "elapsed_s": 10.791687722999995,
+      "run": "rocm-run-02",
+      "case": "00.stdout"
+    },
+    {
+      "mode": "training",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "dtype": "float32",
+      "outcomes": [
+        {
+          "checkpointed": false,
+          "steps": 16,
+          "wall_s": 0.402548156000023,
+          "loss": 0.4867405891418457,
+          "gradient_relative_l2": [
+            2.5100209960050454E-07,
+            2.459862514816272E-07,
+            2.273275479551696E-07
+          ]
+        },
+        {
+          "checkpointed": true,
+          "steps": 16,
+          "wall_s": 1.7343146199999637,
+          "loss": 0.4867405891418457,
+          "gradient_relative_l2": [
+            2.5100209960050454E-07,
+            2.459862514816272E-07,
+            2.273275479551696E-07
+          ]
+        }
+      ],
+      "gradient_relative_l2_limit": 0.0001,
+      "elapsed_s": 3.01070383900003,
+      "run": "rocm-run-02",
+      "case": "01.stdout"
+    },
+    {
+      "mode": "training",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "dtype": "bfloat16",
+      "outcomes": [
+        {
+          "checkpointed": false,
+          "steps": 16,
+          "wall_s": 0.45062502999996923,
+          "loss": 0.48639556765556335,
+          "gradient_relative_l2": [
+            0.0039002836074459794,
+            0.004187784686650703,
+            0.003920411954560983
+          ]
+        },
+        {
+          "checkpointed": true,
+          "steps": 16,
+          "wall_s": 1.0283181210000407,
+          "loss": 0.48639556765556335,
+          "gradient_relative_l2": [
+            0.0039002836074459794,
+            0.004187784686650703,
+            0.003920411954560983
+          ]
+        }
+      ],
+      "gradient_relative_l2_limit": 0.03,
+      "elapsed_s": 2.0954121199999918,
+      "run": "rocm-run-02",
+      "case": "02.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "math",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        1024,
+        256
+      ],
+      "relative_l2": 0.001660215185269136,
+      "max_absolute_error": 0.0009085272551289658,
+      "relative_l2_limit": 0.02,
+      "elapsed_s": 1.311831734000009,
+      "run": "rocm-run-02",
+      "case": "03.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "default",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        1024,
+        256
+      ],
+      "relative_l2": 0.001660215185269136,
+      "max_absolute_error": 0.0009085272551289658,
+      "relative_l2_limit": 0.02,
+      "elapsed_s": 1.0608910809999657,
+      "run": "rocm-run-02",
+      "case": "04.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "math",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        1024,
+        384
+      ],
+      "relative_l2": 0.001658590717347774,
+      "max_absolute_error": 0.0009717695257671077,
+      "relative_l2_limit": 0.02,
+      "elapsed_s": 1.055470304000039,
+      "run": "rocm-run-02",
+      "case": "05.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "default",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        1024,
+        384
+      ],
+      "relative_l2": 0.001658590717347774,
+      "max_absolute_error": 0.0009717695257671077,
+      "relative_l2_limit": 0.02,
+      "elapsed_s": 1.2136258639999937,
+      "run": "rocm-run-02",
+      "case": "06.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "math",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        1024,
+        512
+      ],
+      "relative_l2": 0.0016578910813227256,
+      "max_absolute_error": 0.0008415184486211813,
+      "relative_l2_limit": 0.02,
+      "elapsed_s": 1.1470308899999964,
+      "run": "rocm-run-02",
+      "case": "07.stdout"
+    },
+    {
+      "mode": "attention",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "pass",
+      "backend": "default",
+      "dtype": "bfloat16",
+      "shape": [
+        1,
+        4,
+        1024,
+        512
+      ],
+      "relative_l2": 0.0016578910813227256,
+      "max_absolute_error": 0.0008415184486211813,
+      "relative_l2_limit": 0.02,
+      "elapsed_s": 1.1142563289999998,
+      "run": "rocm-run-02",
+      "case": "08.stdout"
+    },
+    {
+      "mode": "idle",
+      "seed": 357,
+      "torch": "2.13.0+rocm10.0.0",
+      "hip": "7.15.26333",
+      "gpu": "AMD Radeon RX 7800 XT",
+      "arch": "gfx1101",
+      "total_bytes": 17138180096,
+      "status": "observed",
+      "baseline_cpu_percent": 0.001659940585415736,
+      "post_gpu_cpu_percent": 199.97480608396484,
+      "interval_s": 5.000183371000048,
+      "high_idle_cpu": true,
+      "hot_threads": [
+        {
+          "name": "python",
+          "cpu_percent": 99.9963327144938
+        },
+        {
+          "name": "python",
+          "cpu_percent": 99.9963327144938
+        },
+        {
+          "name": "python",
+          "cpu_percent": 0.19999266542898758
+        },
+        {
+          "name": "python",
+          "cpu_percent": 0.0
+        }
+      ],
+      "library_basenames": [
+        "libamdhip64.so.7",
+        "libhsa-runtime64.so.1",
+        "librocdxg.so.1.2.2"
+      ],
+      "after_tensor_release_and_empty_cache_cpu_percent": 200.12009753713446,
+      "elapsed_s": 16.303206079000006,
+      "run": "rocm-run-03",
+      "case": "00.stdout"
+    }
+  ],
+  "events": [
+    {
+      "status": "started",
+      "index": 0,
+      "test": [
+        "smoke"
+      ],
+      "utc": "2026-10-26T21:15:45.523241-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 0,
+      "test": [
+        "smoke"
+      ],
+      "returncode": 0,
+      "wall_s": 5.851077975999999,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:15:51.378832-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 1,
+      "test": [
+        "smoke"
+      ],
+      "utc": "2026-10-26T21:15:51.387206-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 1,
+      "test": [
+        "smoke"
+      ],
+      "returncode": 0,
+      "wall_s": 3.577275888999992,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:15:54.968485-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 2,
+      "test": [
+        "idle"
+      ],
+      "utc": "2026-10-26T21:15:54.975533-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 2,
+      "test": [
+        "idle"
+      ],
+      "returncode": 0,
+      "wall_s": 12.702941873000015,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:07.683402-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 3,
+      "test": [
+        "idle"
+      ],
+      "utc": "2026-10-26T21:16:07.690497-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 3,
+      "test": [
+        "idle"
+      ],
+      "returncode": 0,
+      "wall_s": 12.446899755999993,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:20.140739-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 4,
+      "test": [
+        "attention",
+        "--dim",
+        "256",
+        "--dtype",
+        "float32",
+        "--backend",
+        "math"
+      ],
+      "utc": "2026-10-26T21:16:20.146613-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 4,
+      "test": [
+        "attention",
+        "--dim",
+        "256",
+        "--dtype",
+        "float32",
+        "--backend",
+        "math"
+      ],
+      "returncode": 0,
+      "wall_s": 2.7965359250000006,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:22.948351-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 5,
+      "test": [
+        "attention",
+        "--dim",
+        "256",
+        "--dtype",
+        "float32",
+        "--backend",
+        "default"
+      ],
+      "utc": "2026-10-26T21:16:22.954388-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 5,
+      "test": [
+        "attention",
+        "--dim",
+        "256",
+        "--dtype",
+        "float32",
+        "--backend",
+        "default"
+      ],
+      "returncode": 0,
+      "wall_s": 2.8043366690000084,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:25.763639-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 6,
+      "test": [
+        "attention",
+        "--dim",
+        "256",
+        "--dtype",
+        "float32",
+        "--backend",
+        "efficient"
+      ],
+      "utc": "2026-10-26T21:16:25.770497-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 6,
+      "test": [
+        "attention",
+        "--dim",
+        "256",
+        "--dtype",
+        "float32",
+        "--backend",
+        "efficient"
+      ],
+      "returncode": 0,
+      "wall_s": 2.5439484510000057,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:28.317959-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 7,
+      "test": [
+        "attention",
+        "--dim",
+        "320",
+        "--dtype",
+        "float32",
+        "--backend",
+        "math"
+      ],
+      "utc": "2026-10-26T21:16:28.325128-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 7,
+      "test": [
+        "attention",
+        "--dim",
+        "320",
+        "--dtype",
+        "float32",
+        "--backend",
+        "math"
+      ],
+      "returncode": 0,
+      "wall_s": 2.7996446300000173,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:31.130052-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 8,
+      "test": [
+        "attention",
+        "--dim",
+        "320",
+        "--dtype",
+        "float32",
+        "--backend",
+        "default"
+      ],
+      "utc": "2026-10-26T21:16:31.137084-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 8,
+      "test": [
+        "attention",
+        "--dim",
+        "320",
+        "--dtype",
+        "float32",
+        "--backend",
+        "default"
+      ],
+      "returncode": 0,
+      "wall_s": 2.8054659240000035,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:33.945672-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 9,
+      "test": [
+        "attention",
+        "--dim",
+        "320",
+        "--dtype",
+        "float32",
+        "--backend",
+        "efficient"
+      ],
+      "utc": "2026-10-26T21:16:33.952577-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 9,
+      "test": [
+        "attention",
+        "--dim",
+        "320",
+        "--dtype",
+        "float32",
+        "--backend",
+        "efficient"
+      ],
+      "returncode": 0,
+      "wall_s": 2.547293329000013,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:36.503068-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 10,
+      "test": [
+        "attention",
+        "--dim",
+        "384",
+        "--dtype",
+        "float32",
+        "--backend",
+        "math"
+      ],
+      "utc": "2026-10-26T21:16:36.509921-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 10,
+      "test": [
+        "attention",
+        "--dim",
+        "384",
+        "--dtype",
+        "float32",
+        "--backend",
+        "math"
+      ],
+      "returncode": 0,
+      "wall_s": 2.800970479,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:39.315748-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 11,
+      "test": [
+        "attention",
+        "--dim",
+        "384",
+        "--dtype",
+        "float32",
+        "--backend",
+        "default"
+      ],
+      "utc": "2026-10-26T21:16:39.322025-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 11,
+      "test": [
+        "attention",
+        "--dim",
+        "384",
+        "--dtype",
+        "float32",
+        "--backend",
+        "default"
+      ],
+      "returncode": 0,
+      "wall_s": 2.8016374450000114,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:42.127575-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 12,
+      "test": [
+        "attention",
+        "--dim",
+        "384",
+        "--dtype",
+        "float32",
+        "--backend",
+        "efficient"
+      ],
+      "utc": "2026-10-26T21:16:42.1348-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 12,
+      "test": [
+        "attention",
+        "--dim",
+        "384",
+        "--dtype",
+        "float32",
+        "--backend",
+        "efficient"
+      ],
+      "returncode": 0,
+      "wall_s": 2.5686392320000095,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:44.708071-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 13,
+      "test": [
+        "attention",
+        "--dim",
+        "512",
+        "--dtype",
+        "float32",
+        "--backend",
+        "math"
+      ],
+      "utc": "2026-10-26T21:16:44.715204-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 13,
+      "test": [
+        "attention",
+        "--dim",
+        "512",
+        "--dtype",
+        "float32",
+        "--backend",
+        "math"
+      ],
+      "returncode": 0,
+      "wall_s": 2.800689521999999,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:47.520558-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 14,
+      "test": [
+        "attention",
+        "--dim",
+        "512",
+        "--dtype",
+        "float32",
+        "--backend",
+        "default"
+      ],
+      "utc": "2026-10-26T21:16:47.527472-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 14,
+      "test": [
+        "attention",
+        "--dim",
+        "512",
+        "--dtype",
+        "float32",
+        "--backend",
+        "default"
+      ],
+      "returncode": 0,
+      "wall_s": 2.799048097999986,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:50.331581-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 15,
+      "test": [
+        "attention",
+        "--dim",
+        "512",
+        "--dtype",
+        "float32",
+        "--backend",
+        "efficient"
+      ],
+      "utc": "2026-10-26T21:16:50.338071-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 15,
+      "test": [
+        "attention",
+        "--dim",
+        "512",
+        "--dtype",
+        "float32",
+        "--backend",
+        "efficient"
+      ],
+      "returncode": 0,
+      "wall_s": 2.544577765000014,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:52.887719-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 16,
+      "test": [
+        "attention",
+        "--dim",
+        "256",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "math"
+      ],
+      "utc": "2026-10-26T21:16:52.894255-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 16,
+      "test": [
+        "attention",
+        "--dim",
+        "256",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "math"
+      ],
+      "returncode": 0,
+      "wall_s": 3.0678641019999873,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:55.966732-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 17,
+      "test": [
+        "attention",
+        "--dim",
+        "256",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "default"
+      ],
+      "utc": "2026-10-26T21:16:55.974677-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 17,
+      "test": [
+        "attention",
+        "--dim",
+        "256",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "default"
+      ],
+      "returncode": 0,
+      "wall_s": 3.3268631969999944,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:16:59.305104-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 18,
+      "test": [
+        "attention",
+        "--dim",
+        "256",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "efficient"
+      ],
+      "utc": "2026-10-26T21:16:59.312026-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 18,
+      "test": [
+        "attention",
+        "--dim",
+        "256",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "efficient"
+      ],
+      "returncode": 0,
+      "wall_s": 2.82432560700002,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:17:02.142911-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 19,
+      "test": [
+        "attention",
+        "--dim",
+        "320",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "math"
+      ],
+      "utc": "2026-10-26T21:17:02.148958-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 19,
+      "test": [
+        "attention",
+        "--dim",
+        "320",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "math"
+      ],
+      "returncode": 0,
+      "wall_s": 2.803245117000017,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:17:04.957096-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 20,
+      "test": [
+        "attention",
+        "--dim",
+        "320",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "default"
+      ],
+      "utc": "2026-10-26T21:17:04.964074-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 20,
+      "test": [
+        "attention",
+        "--dim",
+        "320",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "default"
+      ],
+      "returncode": 0,
+      "wall_s": 4.637122901999987,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:17:09.608135-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 21,
+      "test": [
+        "attention",
+        "--dim",
+        "320",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "efficient"
+      ],
+      "utc": "2026-10-26T21:17:09.615714-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 21,
+      "test": [
+        "attention",
+        "--dim",
+        "320",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "efficient"
+      ],
+      "returncode": 0,
+      "wall_s": 3.1056605280000156,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:17:12.729287-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 22,
+      "test": [
+        "attention",
+        "--dim",
+        "384",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "math"
+      ],
+      "utc": "2026-10-26T21:17:12.737372-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 22,
+      "test": [
+        "attention",
+        "--dim",
+        "384",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "math"
+      ],
+      "returncode": 0,
+      "wall_s": 3.0662485510000295,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:17:15.809122-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 23,
+      "test": [
+        "attention",
+        "--dim",
+        "384",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "default"
+      ],
+      "utc": "2026-10-26T21:17:15.815882-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 23,
+      "test": [
+        "attention",
+        "--dim",
+        "384",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "default"
+      ],
+      "returncode": 0,
+      "wall_s": 2.8009645230000046,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:17:18.621488-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 24,
+      "test": [
+        "attention",
+        "--dim",
+        "384",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "efficient"
+      ],
+      "utc": "2026-10-26T21:17:18.628671-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 24,
+      "test": [
+        "attention",
+        "--dim",
+        "384",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "efficient"
+      ],
+      "returncode": 0,
+      "wall_s": 2.5440056099999993,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:17:21.177903-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 25,
+      "test": [
+        "attention",
+        "--dim",
+        "512",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "math"
+      ],
+      "utc": "2026-10-26T21:17:21.183784-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 25,
+      "test": [
+        "attention",
+        "--dim",
+        "512",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "math"
+      ],
+      "returncode": 0,
+      "wall_s": 2.802696099000002,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:17:23.992191-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 26,
+      "test": [
+        "attention",
+        "--dim",
+        "512",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "default"
+      ],
+      "utc": "2026-10-26T21:17:23.999184-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 26,
+      "test": [
+        "attention",
+        "--dim",
+        "512",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "default"
+      ],
+      "returncode": 0,
+      "wall_s": 3.3141129819999833,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:17:27.317004-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 27,
+      "test": [
+        "attention",
+        "--dim",
+        "512",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "efficient"
+      ],
+      "utc": "2026-10-26T21:17:27.32983-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 27,
+      "test": [
+        "attention",
+        "--dim",
+        "512",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "efficient"
+      ],
+      "returncode": 0,
+      "wall_s": 3.3228066000000354,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:17:30.659509-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 28,
+      "test": [
+        "copies"
+      ],
+      "utc": "2026-10-26T21:17:30.66726-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 28,
+      "test": [
+        "copies"
+      ],
+      "returncode": 0,
+      "wall_s": 3.0700886609999998,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:17:33.744044-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 29,
+      "test": [
+        "copies"
+      ],
+      "utc": "2026-10-26T21:17:33.75111-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "completed",
+      "index": 29,
+      "test": [
+        "copies"
+      ],
+      "returncode": 0,
+      "wall_s": 3.0657556119999754,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:17:36.82166-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "suite_complete",
+      "tests": 30,
+      "utc": "2026-10-26T21:17:36.825005-06:00",
+      "run": "rocm-run-01"
+    },
+    {
+      "status": "started",
+      "index": 0,
+      "test": [
+        "idle"
+      ],
+      "utc": "2026-10-26T21:17:59.111966-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "completed",
+      "index": 0,
+      "test": [
+        "idle"
+      ],
+      "returncode": 0,
+      "wall_s": 17.104039520000015,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:18:16.220295-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "started",
+      "index": 1,
+      "test": [
+        "training",
+        "--dtype",
+        "float32"
+      ],
+      "utc": "2026-10-26T21:18:16.230556-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "completed",
+      "index": 1,
+      "test": [
+        "training",
+        "--dtype",
+        "float32"
+      ],
+      "returncode": 0,
+      "wall_s": 6.897290258999988,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:18:23.13201-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "started",
+      "index": 2,
+      "test": [
+        "training",
+        "--dtype",
+        "bfloat16"
+      ],
+      "utc": "2026-10-26T21:18:23.140429-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "completed",
+      "index": 2,
+      "test": [
+        "training",
+        "--dtype",
+        "bfloat16"
+      ],
+      "returncode": 0,
+      "wall_s": 4.861005561000013,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:18:28.007919-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "started",
+      "index": 3,
+      "test": [
+        "attention",
+        "--length",
+        "1024",
+        "--dim",
+        "256",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "math"
+      ],
+      "utc": "2026-10-26T21:18:28.015141-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "completed",
+      "index": 3,
+      "test": [
+        "attention",
+        "--length",
+        "1024",
+        "--dim",
+        "256",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "math"
+      ],
+      "returncode": 0,
+      "wall_s": 3.5912952939999627,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:18:31.614047-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "started",
+      "index": 4,
+      "test": [
+        "attention",
+        "--length",
+        "1024",
+        "--dim",
+        "256",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "default"
+      ],
+      "utc": "2026-10-26T21:18:31.620899-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "completed",
+      "index": 4,
+      "test": [
+        "attention",
+        "--length",
+        "1024",
+        "--dim",
+        "256",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "default"
+      ],
+      "returncode": 0,
+      "wall_s": 3.3322692680000046,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:18:34.958625-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "started",
+      "index": 5,
+      "test": [
+        "attention",
+        "--length",
+        "1024",
+        "--dim",
+        "384",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "math"
+      ],
+      "utc": "2026-10-26T21:18:34.968053-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "completed",
+      "index": 5,
+      "test": [
+        "attention",
+        "--length",
+        "1024",
+        "--dim",
+        "384",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "math"
+      ],
+      "returncode": 0,
+      "wall_s": 3.327011122999977,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:18:38.300082-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "started",
+      "index": 6,
+      "test": [
+        "attention",
+        "--length",
+        "1024",
+        "--dim",
+        "384",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "default"
+      ],
+      "utc": "2026-10-26T21:18:38.307443-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "completed",
+      "index": 6,
+      "test": [
+        "attention",
+        "--length",
+        "1024",
+        "--dim",
+        "384",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "default"
+      ],
+      "returncode": 0,
+      "wall_s": 3.3468487830000413,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:18:41.657556-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "started",
+      "index": 7,
+      "test": [
+        "attention",
+        "--length",
+        "1024",
+        "--dim",
+        "512",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "math"
+      ],
+      "utc": "2026-10-26T21:18:41.663517-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "completed",
+      "index": 7,
+      "test": [
+        "attention",
+        "--length",
+        "1024",
+        "--dim",
+        "512",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "math"
+      ],
+      "returncode": 0,
+      "wall_s": 3.334181766000029,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:18:45.001549-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "started",
+      "index": 8,
+      "test": [
+        "attention",
+        "--length",
+        "1024",
+        "--dim",
+        "512",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "default"
+      ],
+      "utc": "2026-10-26T21:18:45.011554-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "completed",
+      "index": 8,
+      "test": [
+        "attention",
+        "--length",
+        "1024",
+        "--dim",
+        "512",
+        "--dtype",
+        "bfloat16",
+        "--backend",
+        "default"
+      ],
+      "returncode": 0,
+      "wall_s": 3.3435188320000293,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:18:48.360715-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "suite_complete",
+      "tests": 9,
+      "utc": "2026-10-26T21:18:48.363395-06:00",
+      "run": "rocm-run-02"
+    },
+    {
+      "status": "started",
+      "index": 0,
+      "test": [
+        "idle",
+        "--release"
+      ],
+      "utc": "2026-10-26T21:19:13.170998-06:00",
+      "run": "rocm-run-03"
+    },
+    {
+      "status": "completed",
+      "index": 0,
+      "test": [
+        "idle",
+        "--release"
+      ],
+      "returncode": 0,
+      "wall_s": 20.619552876,
+      "reason": null,
+      "kernel_errors": [],
+      "utc": "2026-10-26T21:19:33.793926-06:00",
+      "run": "rocm-run-03"
+    },
+    {
+      "status": "suite_complete",
+      "tests": 1,
+      "utc": "2026-10-26T21:19:33.797182-06:00",
+      "run": "rocm-run-03"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "scope": "extracted constructor and PR loader helpers; injected loader map; no real libraries, runtime, profiler or GPU",
+  "pr_head": "65313194df87e824f2d3a3cd8f13dbcc22f8707a",
+  "limitations": "major=1 constants provided by harness; actual version header, dl_iterate_phdr helper, resolver, topology and full unit build not tested",
+  "cases": [
+    {
+      "pass": false,
+      "acquired": 1,
+      "closed": 1,
+      "new_loads": 1,
+      "variant": "local_candidate",
+      "scenario": "resident_legacy_competing_versioned"
+    },
+    {
+      "pass": false,
+      "acquired": 0,
+      "closed": 0,
+      "new_loads": 0,
+      "variant": "local_candidate",
+      "scenario": "adjacent_versioned_only"
+    },
+    {
+      "pass": true,
+      "acquired": 1,
+      "closed": 1,
+      "new_loads": 1,
+      "variant": "local_candidate",
+      "scenario": "cold_versioned"
+    },
+    {
+      "pass": true,
+      "acquired": 1,
+      "closed": 1,
+      "new_loads": 1,
+      "variant": "local_candidate",
+      "scenario": "legacy_only"
+    },
+    {
+      "pass": true,
+      "acquired": 0,
+      "closed": 0,
+      "new_loads": 0,
+      "variant": "local_candidate",
+      "scenario": "missing"
+    },
+    {
+      "pass": true,
+      "acquired": 1,
+      "closed": 1,
+      "new_loads": 0,
+      "variant": "upstream_pr13576",
+      "scenario": "resident_legacy_competing_versioned"
+    },
+    {
+      "pass": true,
+      "acquired": 1,
+      "closed": 1,
+      "new_loads": 1,
+      "variant": "upstream_pr13576",
+      "scenario": "adjacent_versioned_only"
+    },
+    {
+      "pass": true,
+      "acquired": 1,
+      "closed": 1,
+      "new_loads": 1,
+      "variant": "upstream_pr13576",
+      "scenario": "cold_versioned"
+    },
+    {
+      "pass": true,
+      "acquired": 1,
+      "closed": 1,
+      "new_loads": 1,
+      "variant": "upstream_pr13576",
+      "scenario": "legacy_only"
+    },
+    {
+      "pass": true,
+      "acquired": 0,
+      "closed": 0,
+      "new_loads": 0,
+      "variant": "upstream_pr13576",
+      "scenario": "missing"
+    }
+  ]
+}
